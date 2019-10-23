@@ -1,0 +1,16 @@
+<h2>Simple AirBnB</h2>
+
+<h1>All our Flats</h1>
+<% @flats.each do |flat| %>
+<ul>
+	<li><%= flat.name %></li>
+	<li><%= flat.address %></li>
+	<li><%= flat.description %></li>
+	<li><%= flat.price_per_night %></li>
+	<li><%= flat.number_of_guests %></li>
+	<li><%= link_to "More info", flat_path(flat) %></li>
+	<li><%= link_to "New Flat", new_flat_path %></li>
+
+</ul>
+	
+<% end %>
